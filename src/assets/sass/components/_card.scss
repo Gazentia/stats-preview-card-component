@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkDesaturatedBlue;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include breakpoint-up("md") {
+    flex-direction: row;
+  }
+
+  &__img {
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $softViolet;
+    background-blend-mode: multiply;
+    @include breakpoint-up("md") {
+      flex: 1 1 50%;
+      order: 1;
+      height: auto;
+    }
+  }
+
+  &__body {
+    padding: 40px 20px;
+    line-height: 1.5;
+    @include breakpoint-up("md") {
+      flex: 1 1 50%;
+      padding: 60px 60px 60px 50px;
+    }
+  }
+
+  &__title {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    font-size: $font-lg;
+    color: $white;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    @include breakpoint-up("md") {
+      text-align: left;
+    }
+
+    &--highlight {
+      color: $softViolet;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 40px;
+    @include breakpoint-up("md") {
+      text-align: left;
+    }
+  }
+
+  &__statelist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    line-height: 1.1;
+
+    @include breakpoint-up("md") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .card__title,
+    .card__info {
+    font-weight: 400;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 18px;
+    @include breakpoint-up("md") {
+      margin-bottom: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

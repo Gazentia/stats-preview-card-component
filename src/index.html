@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card__img hide-for-desktop" style="background-image: url(<%= require("./assets/images/image-header-mobile.jpg") %>);"></div>
+          <div class="card__img hide-for-mobile" style="background-image: url(<%= require("./assets/images/image-header-desktop.jpg") %>);">
+        </div>
+        <div class="card__body">
+          <div class="card__title">
+            Get <span class="card__title--highlight">insights</span> that help your business grow.
+          </div>
+          <div class="card__info">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </div>
+          <div class="card__state">
+            <ul class="card__statelist">
+              <li class="card__item">
+                <div class="card__title">10k+</div>
+                <div class="card__info">companies</div>
+              </li>
+              <li class="card__item">
+                <div class="card__title">314</div>
+                <div class="card__info">templates</div>
+              </li>
+              <li class="card__item">
+                <div class="card__title">12M+</div>
+                <div class="card__info">queries</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Gazentia/Gazentia">Gazentia</a>.
+    </div>
+  </body>
+</html>
